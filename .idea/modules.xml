@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../newmo/.idea/newmo.iml" filepath="$PROJECT_DIR$/../newmo/.idea/newmo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/text-cls.iml" filepath="$PROJECT_DIR$/.idea/text-cls.iml" />
+    </modules>
+  </component>
+</project>
