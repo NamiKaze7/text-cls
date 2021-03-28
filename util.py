@@ -32,7 +32,7 @@ def get_dummies(l, size=10):
     return np.array(res)
 
 
-def profile(filepath):
+def profile(filepath, tokenizer):
     x = []
     y = []
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -42,7 +42,7 @@ def profile(filepath):
             y.append(l[1])
         x = np.array(x)
         y = np.array(y)
-        sset = TensorDataset(torch.LongTensor(encod(x)),
+        sset = TensorDataset(torch.LongTensor(encod(x,tokenizer)),
                              torch.FloatTensor(get_dummies(y)))
         loader = DataLoader(dataset=sset,
                             batch_size=20,

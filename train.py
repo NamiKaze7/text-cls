@@ -8,9 +8,10 @@ import time
 
 
 def main():
-    train_loader = util.profile('train.txt')
-    test_loader = util.profile('test.txt')
-    dev_loader = util.profile('dev.txt')
+    tokenizer = BertTokenizer.from_pretrained('bert-base-chinese')
+    train_loader = util.profile('train.txt', tokenizer)
+    test_loader = util.profile('test.txt', tokenizer)
+    dev_loader = util.profile('dev.txt', tokenizer)
 
     bert = BertModel.from_pretrained('bert-base-chinese')
     model = fn_cls(bert)
@@ -65,7 +66,6 @@ def main():
         print('-' * 50)
         print('Validate Epoch: {} acc:{:.2f}%\tLoss:{:.6f}'.format(
             1, np.mean(acc) * 100, np.mean(li)))
-
 
 
 if __name__ == "__main__":
