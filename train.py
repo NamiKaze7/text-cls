@@ -28,8 +28,8 @@ def main():
         # train epoch
         train_time = time.time()
         for batch_idx, (data, target) in enumerate(train_loader):
-            data.cuda()
-            target.cuda()
+            data = data.cuda()
+            target = target.cuda()
             mask = []
             for sample in data:
                 mask.append([1 if i != 0 else 0 for i in sample])
