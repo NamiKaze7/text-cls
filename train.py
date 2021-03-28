@@ -9,7 +9,7 @@ import argparse
 
 parser = argparse.ArgumentParser("Text-cls training task.")
 parser.add_argument("--epoch", type=int, default= 10)
-logger = util.create_logger("Bert Training", log_file='./logfile')
+logger = util.create_logger("Bert Training", log_file='train.log')
 args = parser.parse_args()
 
 
